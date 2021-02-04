@@ -55,4 +55,23 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
         }
         System.out.println("null");
     }
+    @Override
+    public int removeFirst() {
+        if (isEmpty()) {
+            return -1;
+        }
+        else {
+            Node response = head;
+            if (head == tail) {
+                head = null;
+                tail = null;
+                size--;
+            }
+            else {
+                head = head.getNext();
+
+            }
+            return response.getData();
+        }
+    }
 }
