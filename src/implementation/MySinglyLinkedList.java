@@ -12,4 +12,16 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
         tail = null;
         size = 0;
     }
+    @Override
+    public boolean isEmpty() {
+        return head == null;
+    }
+    @Override
+    public int size() {
+        return size;
+    }
+    @Override
+    public void addFirst(int element) {
+
+    }
 }
