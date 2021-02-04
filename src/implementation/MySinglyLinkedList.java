@@ -33,5 +33,26 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
         }
         size++;
     }
-
+    @Override
+    public void addLast(int element) {
+        Node node = new Node(element);
+        if (isEmpty()) {
+            head = node;
+            tail = node;
+        }
+        else {
+            tail.setNext(node);
+            tail = node;
+        }
+        size++;
+    }
+    @Override
+    public void traverse() {
+        Node temp = head;
+        while(temp != null)  {
+            System.out.print(temp.getData() + "-->");
+            temp = temp.getNext();
+        }
+        System.out.println("null");
+    }
 }
