@@ -6,4 +6,6 @@ public interface SinglyLinkedListADT {
     int size();
     void addLast(int element);
     void traverse();
+    int removeFirst();
+    int removeLast();
 }
