@@ -69,9 +69,32 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
             }
             else {
                 head = head.getNext();
-
+                size--;
             }
             return response.getData();
+        }
+    }
+
+    @Override
+    public int removeLast() {
+        if (isEmpty()) {
+            return -1;
+        }
+        else {
+            Node temp = head;
+            Node previous = null;
+            while (temp.getNext() != null) {
+                previous = temp;
+                temp = temp.getNext();
+            }
+            if (previous == null) {
+                head = null;
+                tail = null;
+                size--;
+            }
+            else {
+
+            }
         }
     }
 }
