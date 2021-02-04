@@ -22,6 +22,16 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
     }
     @Override
     public void addFirst(int element) {
-
+        Node node = new Node(element);
+        if (isEmpty()) {
+            head = node;
+            tail = node;
+        }
+        else {
+            node.setNext(head);
+            head = node;
+        }
+        size++;
     }
+
 }
