@@ -100,13 +100,22 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
     }
 
     @Override
-    public void addLastWithoutUsingTail() {
-
+    public int addLastWithoutUsingTail() {
+        if (!isEmpty()) {
+            Node temp = head;
+            while(temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+            return temp.getData();
+        }
+        return -1;
     }
 
     @Override
-    public void addAfterGivenNode(int givenElement, int element) {
-
+    public boolean addAfterGivenNode(int givenElement, int element) {
+        boolean response = false;
+        if ()
+        return response;
     }
 
     @Override
