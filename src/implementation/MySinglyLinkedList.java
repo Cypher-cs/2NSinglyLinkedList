@@ -96,5 +96,42 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
 
             }
         }
+        return 0;
+    }
+
+    @Override
+    public void addLastWithoutUsingTail() {
+
+    }
+
+    @Override
+    public void addAfterGivenNode(int givenElement, int element) {
+
+    }
+
+    @Override
+    public int removeGivenNode(int givenElement) {
+        return 0;
+    }
+
+    @Override
+    public boolean search(int element) {
+        return false;
+    }
+
+    @Override
+    public int first() {
+        if (!isEmpty()) {
+            return head.getData();
+        }
+        return 0;
+    }
+
+    @Override
+    public int last() {
+        if (!isEmpty()) {
+            return tail.getData();
+        }
+        return 0;
     }
 }
