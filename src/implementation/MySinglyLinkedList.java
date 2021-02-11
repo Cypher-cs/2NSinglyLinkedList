@@ -96,7 +96,7 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
 
             }
         }
-        return 0;
+        return -1;
     }
 
     @Override
@@ -111,7 +111,7 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
 
     @Override
     public int removeGivenNode(int givenElement) {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -124,7 +124,7 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
         if (!isEmpty()) {
             return head.getData();
         }
-        return 0;
+        return -1;//considering -1 as invalid
     }
 
     @Override
@@ -132,6 +132,6 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
         if (!isEmpty()) {
             return tail.getData();
         }
-        return 0;
+        return -1;
     }
 }
