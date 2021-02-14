@@ -7,7 +7,7 @@ public interface SinglyLinkedListADT {
     void addLast(int element);
     int addLastWithoutUsingTail();
     void traverse();
-    boolean addAfterGivenNode(int givenElement, int element);
+    void addAfterGivenNode(int givenElement, int element);
     int removeFirst(); //O(1)
     int removeLast(); //O(N)
     int removeGivenNode(int givenElement);
