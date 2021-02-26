@@ -93,10 +93,12 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
                 tail = null;
                 size--;
             } else {
-
+                previous.setNext(null);
+                tail = previous;
+                size--;
             }
+            return temp.getData();
         }
-        return -1;
     }
 
     @Override
