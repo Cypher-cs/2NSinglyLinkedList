@@ -5,7 +5,7 @@ public interface SinglyLinkedListADT {
     boolean isEmpty();
     int size(); //O(1)
     void addLast(int element);
-    int addLastWithoutUsingTail();
+    void addLastWithoutUsingTail(int element);
     void traverse();
     void addAfterGivenNode(int givenElement, int element);
     int removeFirst(); //O(1)
@@ -14,4 +14,5 @@ public interface SinglyLinkedListADT {
     boolean search(int element);
     int first(); // O(1)
     int last(); // O(1)
+    int middleNode();
 }

@@ -102,15 +102,20 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
     }
 
     @Override
-    public int addLastWithoutUsingTail() {
+    public void addLastWithoutUsingTail(int element) {
+        Node node = new Node(element);
         if (!isEmpty()) {
             Node temp = head;
             while (temp.getNext() != null) {
                 temp = temp.getNext();
             }
-            return temp.getData();
+            temp.setNext(node);
+            node.setNext(null);
         }
-        return -1;
+        else {
+            head = node;
+            tail = node;
+        }
     }
 
     @Override
@@ -162,5 +167,20 @@ public class MySinglyLinkedList implements SinglyLinkedListADT {
             return tail.getData();
         }
         return -1;
+    }
+    @Override
+    public int middleNode() {
+        if (!isEmpty()) {
+            Node slow = head;
+            Node fast = head;
+            while(fast != null && fast.getNext() != null) {
+                slow = slow.getNext();
+                fast = fast.getNext().getNext();
+            }
+            return slow.getData();
+        }
+        else {
+            return -1;
+        }
     }
 }

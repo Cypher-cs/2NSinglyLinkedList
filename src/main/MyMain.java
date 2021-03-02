@@ -17,8 +17,12 @@ public class MyMain {
         linkedList.addLast(20);
         linkedList.addLast(30);
         linkedList.addLast(40);
+        linkedList.addLast(50);
+        linkedList.addLast(60);
+        linkedList.addLast(70);
         linkedList.addAfterGivenNode(20, 25);
         linkedList.traverse();
         System.out.println("Size = " + linkedList.size());
+        System.out.println("Middle node = " + linkedList.middleNode());
     }
 }
